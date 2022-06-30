@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap");
+.Home {
+  /* font-family: 'Roboto', sans-serif; */
+
+  display: flex;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+
+  /* background: black;
+  opacity: 10; */
+}
+
+.Home img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.Home-svg {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Home-desc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  top: 5%;
+  left: 55%;
+
+}
+
+.Home-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 70px;
+  margin-bottom: 5%;
+  text-align: left;
+  margin-right: 5%;
+  /* color: #1c468a; */
+  color: #00587a;
+}
+
+.student{
+  color: #FBA70D;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.Home-info {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  /* font-weight: bold; */
+  font-size: 20px;
+  line-height: 29px;
+  color: #1b6886;
+
+  
+  /* margin-left: 4%; */
+}
+
+.button-container{
+  display: flex;
+  align-items: flex-start;
+  margin-right: 50%;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .Home {
+    text-align: center;
+    align-self: center;
+  }
+  .Home-desc {
+    position: absolute;
+    display: flex;
+    top: 15%;
+    left: 0%;
+
+
+  }
+
+  .Home-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 78px;
+    margin-bottom: 10%;
+    color: #1c468a;
+  }
+
+  .Home-info {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    color: #1c468a;
+
+  }
+
+}

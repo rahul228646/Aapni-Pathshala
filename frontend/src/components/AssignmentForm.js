@@ -83,7 +83,7 @@ export default function ResponsiveDialog(props) {
       }
 
       console.log(body);
-      axios.post("http://localhost:5000/api/assignment/add",body,config)
+      axios.post("https://aapni-pathshala.herokuapp.com/api/assignment/add",body,config)
         .then(response=>{
           console.log(response.data);
           setOpen(false);

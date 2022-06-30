@@ -45,7 +45,7 @@ export function Dashboard(props) {
 
     if(props.auth.isStudent)
     {
-      axios.get("http://localhost:5000/api/user/joinedClasses",config)
+      axios.get("https://aapni-pathshala.herokuapp.com/api/user/joinedClasses",config)
           .then(response=>{
             console.log(response.data);
             setJoinedClasses(response.data);
@@ -53,14 +53,14 @@ export function Dashboard(props) {
     }
     else
     {
-      axios.get("http://localhost:5000/api/teacher/myClassrooms",config)
+      axios.get("https://aapni-pathshala.herokuapp.com/api/teacher/myClassrooms",config)
           .then(response=>{
             console.log(response.data);
             setJoinedClasses(response.data);
           })
     }
 
-    axios.get('http://localhost:5000/api/progress',config)
+    axios.get('https://aapni-pathshala.herokuapp.com/api/progress',config)
         .then(response=>{
           // console.log(response.data);
           setProgress(response.data);

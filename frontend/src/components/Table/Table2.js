@@ -63,7 +63,7 @@ export default function Table2(props) {
         const body = {
             classId:idClass,
         }
-        axios.post("http://localhost:5000/api/classroom/leaderboard",body,config).then(res =>{
+        axios.post("https://aapni-pathshala.herokuapp.com/api/classroom/leaderboard",body,config).then(res =>{
             console.log("&&&",res.data)
             setTableData(res.data)
             

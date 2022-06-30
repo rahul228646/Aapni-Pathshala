@@ -41,7 +41,7 @@ export default function ScrollDialog(props) {
 
     axios
       .get(
-        `http://localhost:5000/api/classroom/joinedstudents/${classId}`,
+        `https://aapni-pathshala.herokuapp.com/api/classroom/joinedstudents/${classId}`,
         config
       )
       .then((response) => {

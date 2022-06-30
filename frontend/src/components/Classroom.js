@@ -36,7 +36,7 @@ const Classroom = (props) => {
 
     axios
       .get(
-        `http://localhost:5000/api/material/${location.state.classid}`,
+        `https://aapni-pathshala.herokuapp.com/api/material/${location.state.classid}`,
         config
       )
       .then((res) => {
@@ -47,7 +47,7 @@ const Classroom = (props) => {
 
     axios
       .get(
-        `http://localhost:5000/api/classroom/desc/${location.state.classid}`,
+        `https://aapni-pathshala.herokuapp.com/api/classroom/desc/${location.state.classid}`,
         config
       )
       .then((response) => {
@@ -97,7 +97,7 @@ const Classroom = (props) => {
             <StudyMaterialList
               key={key}
               text={smat.text}
-              material={`http://localhost:5000/${smat.material}`}
+              material={`https://aapni-pathshala.herokuapp.com/${smat.material}`}
               subject={subject}
               teacher={teacher}
             />

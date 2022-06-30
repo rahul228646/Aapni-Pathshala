@@ -76,7 +76,7 @@ export default function JoinClass() {
         }
 
         axios
-          .post('http://localhost:5000/api/classroom/join', body, config)
+          .post('https://aapni-pathshala.herokuapp.com/api/classroom/join', body, config)
           .then((response) => {
             console.log(response.data);
             setOpen(false);

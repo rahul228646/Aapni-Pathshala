@@ -70,7 +70,7 @@ export default function ClassroomForm(props) {
     data.append('id', classId);
 
     axios
-      .post('http://localhost:5000/api/material', data, config2)
+      .post('https://aapni-pathshala.herokuapp.com/api/material', data, config2)
       .then((response) => {
         console.log(response.data);
         setExpanded(false);

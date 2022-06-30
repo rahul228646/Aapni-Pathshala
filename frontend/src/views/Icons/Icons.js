@@ -35,14 +35,14 @@ export function Icons(props) {
 
     // if (props.auth.isStudent) {
     //   axios
-    //     .get('http://localhost:5000/api/user/joinedClasses', config)
+    //     .get('https://aapni-pathshala.herokuapp.com/api/user/joinedClasses', config)
     //     .then((response) => {
     //       console.log(response.data);
     //       setJoinedClasses(response.data);
     //     });
     // } else {
     //   axios
-    //     .get('http://localhost:5000/api/teacher/myClassrooms', config)
+    //     .get('https://aapni-pathshala.herokuapp.com/api/teacher/myClassrooms', config)
     //     .then((response) => {
     //       console.log(response.data);
     //       setJoinedClasses(response.data);
@@ -51,7 +51,7 @@ export function Icons(props) {
     if(props.auth.isStudent)
     {
       axios
-        .get('http://localhost:5000/api/assignment', config)
+        .get('https://aapni-pathshala.herokuapp.com/api/assignment', config)
         .then((response) => {
           console.log('**--**', response.data);
           setAssignments(response.data);
@@ -60,7 +60,7 @@ export function Icons(props) {
     }
     else
     {
-      axios.get('http://localhost:5000/api/assignment/teacherAssignments', config)
+      axios.get('https://aapni-pathshala.herokuapp.com/api/assignment/teacherAssignments', config)
         .then((response) => {
           console.log('teacher  ', response.data);
           setTeacherassignments(response.data);
@@ -68,7 +68,7 @@ export function Icons(props) {
     }
 
 
-    // axios.get('http://localhost:5000/api/progress', config).then((response) => {
+    // axios.get('https://aapni-pathshala.herokuapp.com/api/progress', config).then((response) => {
     //   // console.log(response.data);
     //   setProgress(response.data);
     // });

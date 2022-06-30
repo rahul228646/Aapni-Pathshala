@@ -21,7 +21,7 @@ export const loadUser = () => {
 
     try {
       console.log("hi");
-      const res = await axios.get("http://localhost:5000/api/auth");
+      const res = await axios.get("https://aapni-pathshala.herokuapp.com/api/auth");
       console.log("res ",res);
       dispatch({
         type: USER_LOADED,
@@ -52,7 +52,7 @@ export const register = ({ name, email, password, standard }) => {
       console.log("i am here");
       console.log(body);
       const res = await axios.post(
-        "http://localhost:5000/api/user",
+        "https://aapni-pathshala.herokuapp.com/api/user",
         body,
         config
       );
@@ -91,7 +91,7 @@ export const registerTeacher = ({ name, email, password}) => {
       console.log("i am here");
       console.log(body);
       const res = await axios.post(
-        "http://localhost:5000/api/teacher",
+        "https://aapni-pathshala.herokuapp.com/api/teacher",
         body,
         config
       );
@@ -118,7 +118,7 @@ export const registerTeacher = ({ name, email, password}) => {
 
 // export function register(name, email, password, standard) {
 //   return (dispatch) => {
-//     const url = "http://localhost:5000/api/user";
+//     const url = "https://aapni-pathshala.herokuapp.com/api/user";
 //     fetch(url, {
 //       method: "POST",
 //       headers: {
@@ -158,12 +158,12 @@ export const loginStudent = (email, password) => {
     const body = JSON.stringify({ email, password });
 
     try {
-      const res = await axios.post("http://localhost:5000/api/user/login", body, config);
+      const res = await axios.post("https://aapni-pathshala.herokuapp.com/api/user/login", body, config);
 
     console.log(res);
      if(res.data==="No user exist")
      {
-       const res2 = await axios.post("http://localhost:5000/api/teacher/login", body, config);
+       const res2 = await axios.post("https://aapni-pathshala.herokuapp.com/api/teacher/login", body, config);
 
        if(res2.data==="No teacher exist")
        {

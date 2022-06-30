@@ -73,7 +73,7 @@ export default function CreateClass() {
         };
 
         axios
-          .post('http://localhost:5000/api/classroom', body , config)
+          .post('https://aapni-pathshala.herokuapp.com/api/classroom', body , config)
           .then((response) => {
             console.log(response.data);
             setClassCode(response.data.code) ;

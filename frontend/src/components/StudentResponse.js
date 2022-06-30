@@ -110,7 +110,7 @@ function StudentResponse(props) {
         };
 
         axios
-          .get(`http://localhost:5000/api/studentresponse/${props.id}`, config)
+          .get(`https://aapni-pathshala.herokuapp.com/api/studentresponse/${props.id}`, config)
           .then((res) => {
             setAssignmentResponses(res.data);
             console.log("RESponses--->>>",res.data) ;
@@ -156,7 +156,7 @@ function StudentResponse(props) {
     };
 
     axios
-      .post('http://localhost:5000/api/studentresponse', body2, config)
+      .post('https://aapni-pathshala.herokuapp.com/api/studentresponse', body2, config)
       .then((res) => {
         console.log(res.data);
         setOpen(false);
@@ -167,7 +167,7 @@ function StudentResponse(props) {
       .catch((err) => console.log('****', err));
 
     axios
-      .post('http://localhost:5000/api/assignment/submit', body, config)
+      .post('https://aapni-pathshala.herokuapp.com/api/assignment/submit', body, config)
       .then((res) => {
         console.log(res.data);
         setOpen(false);

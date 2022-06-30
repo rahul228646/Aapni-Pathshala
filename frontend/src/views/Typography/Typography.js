@@ -34,7 +34,7 @@ export default function TypographyPage() {
       },
     };
     axios
-      .get('http://localhost:5000/api/screentime/timeline', config)
+      .get('https://aapni-pathshala.herokuapp.com/api/screentime/timeline', config)
       .then((res) => {
         for (let i = 0; i < res.data.length; i++) {
           const d = res.data[i].date;

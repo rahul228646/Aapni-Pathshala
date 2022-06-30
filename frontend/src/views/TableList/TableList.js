@@ -15,7 +15,7 @@ class TableList extends Component {
           }
         if(this.props.auth.isStudent)
     {
-      axios.get("http://localhost:5000/api/user/joinedClasses",config)
+      axios.get("https://aapni-pathshala.herokuapp.com/api/user/joinedClasses",config)
           .then(response=>{
             console.log(response.data);
             this.setState({classes:response.data});
@@ -23,7 +23,7 @@ class TableList extends Component {
     }
     else
     {
-      axios.get("http://localhost:5000/api/teacher/myClassrooms",config)
+      axios.get("https://aapni-pathshala.herokuapp.com/api/teacher/myClassrooms",config)
           .then(response=>{
             console.log(response.data);
             this.setState({classes:response.data});

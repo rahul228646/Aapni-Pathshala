@@ -34,7 +34,7 @@ export function AdminNavbarLinks(props) {
 
     //console.log(body);
 
-    axios.post("http://localhost:5000/api/screentime",body,config)
+    axios.post("https://aapni-pathshala.herokuapp.com/api/screentime",body,config)
       .then(response=>{
         console.log(response.data);
         props.dispatch(logout());
